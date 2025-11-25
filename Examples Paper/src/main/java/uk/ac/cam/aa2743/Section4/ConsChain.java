@@ -2,18 +2,27 @@ package uk.ac.cam.aa2743.Section4;
 
 public class ConsChain {
     public static void create() {
-        int a = 0;
+        System.out.println("Instantiating classes:");
+        C c = new C();
     }
 }
 
 class A {
-    int x = 0;
+    public A() {
+        System.out.println("A instantiated.");
+    }
 }
 
 class B extends A {
-    int y = 1;
+    public B() {
+        super();
+        System.out.println("B instantiated.");
+    }
 }
 
 class C extends B {
-    int z = 2;
+    public C() {
+        super();
+        System.out.println("C instantiated.");
+    }
 }
