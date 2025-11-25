@@ -4,6 +4,6 @@ public class Section4Run {
     public static void run() {
         System.out.println("--- Running Section 4 Code ---");
 
-        defaultAccess.get();
+        DefaultAccess.get();
     }
 }
