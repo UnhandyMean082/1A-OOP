@@ -15,38 +15,39 @@ public class OOPLinkedList {
     }
 
     public int removeFromHead() {
-        if (head == null) {
+        if (this.head == null) {
             throw new IllegalStateException("Cannot remove from an empty list.");
         }
-
         int removedData = this.head.getData();
-
         this.head = this.head.getNext();
         this.size--;
-
         return removedData;
     }
 
-    public int getHead() {
-        if (head == null) {
+    public OOPLinkedListElement getHead() {
+        if (this.head == null) {
+            throw new IllegalStateException("List is empty.");
+        }
+        return this.head;
+    }
+
+    public int getHeadVal() {
+        if (this.head == null) {
             throw new IllegalStateException("List is empty.");
         }
         return this.head.getData();
     }
 
     public int getNthElement(int n) {
-        if (n < 0 || n >= size) {
-            throw new IndexOutOfBoundsException("Index: " + n + ", Size: " + size);
+        if (n < 0 || n >= this.size) {
+            throw new IndexOutOfBoundsException("Index: " + n + ", Size: " + this.size);
         }
-
         OOPLinkedListElement current = this.head;
         int count = 0;
-
         while (count < n) {
             current = current.getNext();
             count++;
         }
-
         return current.getData();
     }
 

@@ -4,16 +4,17 @@ import uk.ac.cam.aa2743.Section2.OOPLinkedList;
 import uk.ac.cam.aa2743.Section2.OOPLinkedListElement;
 
 public class OOPSortedLinkedList extends OOPLinkedList {
+
     public void addElement(int content) {
-        if (head == null || content <= head.getData()) {
-            head = new OOPLinkedListElement(content, head);
+        if (this.head == null || content <= this.head.getData()) {
+            this.head = new OOPLinkedListElement(content, this.head);
         } else {
-            OOPLinkedListElement index = head;
+            OOPLinkedListElement index = this.head;
             while (index.getNext() != null && index.getNext().getData() < content) {
                 index = index.getNext();
             }
             index.setNext(new OOPLinkedListElement(content, index.getNext()));
         }
-        size = size + 1;
+        this.size = this.size + 1;
     }
 }

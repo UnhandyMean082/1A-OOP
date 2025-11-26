@@ -22,5 +22,15 @@ public class Section4Run {
             out.append(sorted.removeFromHead()).append(", ");
         }
         System.out.println("Sorted test: " + out.substring(0, out.length() - 2) + "\n");
+
+        OOPLazySortedLinkedList lazySorted = new OOPLazySortedLinkedList();
+        for (int i : new int[] {5, 3, 1, 2, 4}) {
+            lazySorted.addToHead(i);
+        }
+        out = new StringBuilder();
+        while (lazySorted.getLength() != 0) {
+            out.append(lazySorted.removeFromHead()).append(", ");
+        }
+        System.out.println("Lazy sorted test: " + out.substring(0, out.length() - 2) + "\n");
     }
 }

@@ -10,11 +10,11 @@ public class OOPLinkedListElement {
     }
 
     public int getData() {
-        return data;
+        return this.data;
     }
 
     public OOPLinkedListElement getNext() {
-        return next;
+        return this.next;
     }
 
     public void setNext(OOPLinkedListElement next) {
