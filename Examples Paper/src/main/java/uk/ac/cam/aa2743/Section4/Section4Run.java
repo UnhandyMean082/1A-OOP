@@ -6,5 +6,7 @@ public class Section4Run {
         DefaultAccess.get();
         System.out.println();
         ConsChain.create();
+        System.out.println();
+        TestShadowing.test();
     }
 }
