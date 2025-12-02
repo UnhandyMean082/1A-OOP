@@ -16,6 +16,9 @@ public class Main {
             case "4":
                 Section4Run.run();
                 break;
+            case "7":
+                Section7Run.run();
+                break;
             // Add other cases for "5", "6", etc.
             default:
                 System.out.println("Unknown section: " + sectionToRun);
