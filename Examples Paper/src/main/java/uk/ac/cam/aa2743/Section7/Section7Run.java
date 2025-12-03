@@ -6,6 +6,6 @@ public class Section7Run {
 
         Point3D less = new Point3D(1, 2, 4);
         Point3D more = new Point3D(2, 3, 4);
-        System.out.println("Less is " + less < more + " than more.\n")
+        System.out.println("Less is " + less.compareTo(more) + " than more.\n");
     }
 }
