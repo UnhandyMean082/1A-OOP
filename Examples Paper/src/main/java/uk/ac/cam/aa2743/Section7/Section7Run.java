@@ -55,6 +55,27 @@ public class Section7Run {
         List<String> topStudents = sd.getTopP(40.0);
         List<String> expectedTop = Arrays.asList("David", "Eve", "Bob");
         boolean topPTest = topStudents.equals(expectedTop);
-        System.out.println("getTopP() test (40%): " + (topPTest ? "PASS" : "FAIL"));
+        System.out.println("getTopP() test (40%): " + (topPTest ? "PASS" : "FAIL") + "\n");
+
+        Pair p1_ = new Pair(10, 5);
+        boolean accessorTest1 = p1_.c1 == 10 && p1_.c2 == 5;
+        System.out.println("Pair Accessor Test: " + (accessorTest1 ? "PASS" : "FAIL"));
+        Pair p2 = new Pair(20, 100);
+        boolean primarySortTest = p1_.compareTo(p2) < 0; // 10 < 20
+        System.out.println("Pair Primary Sort Test (10 vs 20): " + (primarySortTest ? "PASS" : "FAIL"));
+        Pair p3 = new Pair(10, 20);
+        boolean secondarySortTest = p1_.compareTo(p3) < 0; // 5 < 20 when c1 is equal
+        System.out.println("Pair Secondary Sort Test (5 vs 20): " + (secondarySortTest ? "PASS" : "FAIL"));
+        boolean stringTest = p1_.getString().equals("10, 5");
+        System.out.println("Pair getString() Test: " + (stringTest ? "PASS" : "FAIL"));
+        List<Pair> sortList = new ArrayList<>();
+        sortList.add(p2);
+        sortList.add(p1_);
+        sortList.add(p3);
+        Collections.sort(sortList);
+        boolean sortIntegrationTest = sortList.get(0).c1 == 10 && sortList.get(0).c2 == 5 &&
+                sortList.get(1).c1 == 10 && sortList.get(1).c2 == 20 &&
+                sortList.get(2).c1 == 20 && sortList.get(2).c2 == 100;
+        System.out.println("Collections Sort Integration Test: " + (sortIntegrationTest ? "PASS" : "FAIL"));
     }
 }
