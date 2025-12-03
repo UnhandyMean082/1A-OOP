@@ -4,6 +4,7 @@ package uk.ac.cam.aa2743;
 import uk.ac.cam.aa2743.Section4.Section4Run;
 import uk.ac.cam.aa2743.Section7.Section7Run;
 import uk.ac.cam.aa2743.Section8.Section8Run;
+import uk.ac.cam.aa2743.Section9.Section9Run;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,6 +24,9 @@ public class Main {
                 break;
             case "8":
                 Section8Run.run();
+                break;
+            case "9":
+                Section9Run.run();
                 break;
             // Add other cases for "5", "6", etc.
             default:
